@@ -1,4 +1,4 @@
-﻿{
+{
 	"@platforms": [
 		"android",
 		"iPhone",
@@ -254,7 +254,10 @@
 					"js/mui.enterfocus.js",
 					"css/mui.min.css",
 					"images/weixin.png",
-					"images/qq.png"
+					"images/qq.png",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"css/style.css"
 				],
 				"refer": [
 					"main.html",
@@ -278,7 +281,8 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"css/app.css",
-					"images/60x60.gif"
+					"images/60x60.gif",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"setting.html"
@@ -297,7 +301,10 @@
 					"js/feedback.js",
 					"js/feedback-page.js",
 					"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-					"js/mui.view.js"
+					"js/mui.view.js",
+					"css/feedback-page.css",
+					"fonts/mui.ttf",
+					"css/style.css"
 				],
 				"refer": [
 					"login.html"
