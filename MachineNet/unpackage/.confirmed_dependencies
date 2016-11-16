@@ -1,0 +1,31 @@
+{
+  "guide.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.js"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "js/mui.enterfocus.js"
+    ],
+    "refer": [
+      "main.html",
+      "reg.html",
+      "forget_password.html"
+    ]
+  },
+  "reg.html": {
+    "resources": [
+      "css/style.css"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  }
+}
