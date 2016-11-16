@@ -8,7 +8,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<link rel="stylesheet" href="./css/mui.min.css">
+		<link rel="stylesheet" href="css/mui.min.css">
 		<style>
 			html,
 			body {
@@ -135,7 +135,7 @@
 				display: none;
 			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="./css/feedback-page.css" />
+		<link rel="stylesheet" type="text/css" href="css/feedback-page.css" />
 	</head>
 
 	<body>
@@ -410,6 +410,7 @@
 				switch (index) {
 					case 1:
 						app.setState({});
+						localStorage.removeItem('$users')
 						mui.openWindow({
 							url: 'login.html',
 							id: 'login',
@@ -441,7 +442,7 @@
 					var isActive = event.detail.isActive;
 					locker.style.display = isActive ? 'block' : 'none';
 					if (!isActive) {
-						//						alert(0);
+						//	alert(0);
 						settings.gestures = '';
 						app.setSettings(settings);
 					}

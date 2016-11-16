@@ -252,7 +252,9 @@
 					"js/app.js",
 					"js/mui.min.js",
 					"js/mui.enterfocus.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/weixin.png",
+					"images/qq.png"
 				],
 				"refer": [
 					"main.html",
@@ -274,7 +276,9 @@
 				"resources": [
 					"js/app.js",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/app.css",
+					"images/60x60.gif"
 				],
 				"refer": [
 					"setting.html"
@@ -303,8 +307,6 @@
 		},
 		"idle": {
 			"resources": [
-				"images/weixin.png",
-				"images/qq.png",
 				"images/iconfont-tianjia.png",
 				"index.html",
 				"unlock.html",
