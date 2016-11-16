@@ -35,6 +35,26 @@
       "js/mui.min.js",
       "css/mui.min.css"
     ],
-    "refer": []
+    "refer": [
+      "setting.html"
+    ]
+  },
+  "setting.html": {
+    "resources": [
+      "js/mui.locker.js",
+      "js/app.js",
+      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "libs/easymob-webim-sdk/json2.js",
+      "libs/easymob-webim-sdk/jquery-1.11.1.js",
+      "js/feedback.js",
+      "js/feedback-page.js",
+      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+      "js/mui.view.js"
+    ],
+    "refer": [
+      "login.html"
+    ]
   }
 }
