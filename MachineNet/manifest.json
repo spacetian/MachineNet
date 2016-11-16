@@ -216,7 +216,8 @@
 				"resources": [
 					"js/app.js",
 					"js/mui.min.js",
-					"js/mui.enterfocus.js"
+					"js/mui.enterfocus.js",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"main.html",
@@ -232,6 +233,15 @@
 				"refer": [
 					"login.html"
 				],
+				"priority": 0
+			},
+			"main.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
