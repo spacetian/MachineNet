@@ -34,9 +34,9 @@
 				type: 'POST',
 				timeout: 10000,
 				success: function(data) {
-					console.log(" test button success [data]:" + data);
+					console.log(" 登录信息返回值" + data);
 					plus.nativeUI.closeWaiting();
-					mui.toast("【返回值】：" + data);
+				
 					if(data == "0"){
 						authed = true;
 						localStorage.setItem("userName", loginInfo.userName);
