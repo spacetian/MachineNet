@@ -257,7 +257,8 @@
 					"fonts/mui.ttf",
 					"css/app.css",
 					"css/style.css",
-					"fonts/mui-icons-extra.ttf"
+					"fonts/mui-icons-extra.ttf",
+					"images/LOGOV.png"
 				],
 				"refer": [
 					"main.html",
