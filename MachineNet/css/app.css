@@ -19,3 +19,14 @@
 	font-size: 14px;
 	color: #8f8f94;
 }
+
+.mui-grid-view.mui-grid-9 .mui-media {
+    color: #696767;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    margin: 0;
+    padding: 11px 15px;
+    vertical-align: top;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dedbdb;
+}

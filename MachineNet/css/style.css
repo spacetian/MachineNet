@@ -6,3 +6,8 @@ body {
 	padding: 0px;
 }
 .mui-content{height: 100%;}
+
+.navLogo{
+	padding: 5px 0;
+	margin-left: 20px;
+}
