@@ -18,7 +18,8 @@
       "images/qq.png",
       "fonts/mui.ttf",
       "css/app.css",
-      "css/style.css"
+      "css/style.css",
+      "fonts/mui-icons-extra.ttf"
     ],
     "refer": [
       "main.html",

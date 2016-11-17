@@ -225,11 +225,11 @@
 					}
 				},
 				"android": {
-					"mdpi": "C:/Users/space/Pictures/logo.png", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "C:/Users/space/Pictures/logo.png", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/space/Pictures/logo.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/space/Pictures/logo.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/space/Pictures/logo.png"
+					"mdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png"
 				}
 			}
 		}
@@ -256,7 +256,8 @@
 					"images/qq.png",
 					"fonts/mui.ttf",
 					"css/app.css",
-					"css/style.css"
+					"css/style.css",
+					"fonts/mui-icons-extra.ttf"
 				],
 				"refer": [
 					"main.html",
