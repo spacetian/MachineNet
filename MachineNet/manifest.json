@@ -326,7 +326,9 @@
 					"css/mui.min.css",
 					"js/app.js",
 					"css/app.css",
-					"css/style.css"
+					"css/style.css",
+					"css/font-awesome.css",
+					"fonts/fontawesome-webfont.woff2"
 				],
 				"refer": [
 					"Pages/MySetting.html",
@@ -343,7 +345,10 @@
 					"css/mui.min.css",
 					"fonts/mui.ttf",
 					"Pages/StockByProduct.html",
-					"Pages/StockByMachine.html"
+					"Pages/StockByMachine.html",
+					"css/app.css",
+					"css/font-awesome.css",
+					"fonts/fontawesome-webfont.woff2"
 				],
 				"refer": [],
 				"priority": 0
@@ -359,7 +364,10 @@
 					"Pages/OrderDetailByDay.html",
 					"Pages/OrderByPayType.html",
 					"Pages/OrderByMoney.html",
-					"Pages/OrderByProduct.html"
+					"Pages/OrderByProduct.html",
+					"css/font-awesome.css",
+					"fonts/fontawesome-webfont.woff2",
+					"css/app.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -371,7 +379,10 @@
 					"fonts/mui.ttf",
 					"Pages/MachineProduct.html",
 					"Pages/MachineStatus.html",
-					"Pages/MachineLocation.html"
+					"Pages/MachineLocation.html",
+					"css/app.css",
+					"css/font-awesome.css",
+					"fonts/fontawesome-webfont.woff2"
 				],
 				"refer": [],
 				"priority": 0
@@ -382,7 +393,10 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"Pages/SettingChannelProductPic.html",
-					"Pages/SettingChannel.html"
+					"Pages/SettingChannel.html",
+					"css/app.css",
+					"css/font-awesome.css",
+					"fonts/fontawesome-webfont.woff2"
 				],
 				"refer": [],
 				"priority": 0

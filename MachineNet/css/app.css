@@ -30,3 +30,6 @@
     border-right: 1px solid #dcdcdc;
     border-bottom: 1px solid #dedbdb;
 }
+.mui-col-xs-6 .mui-icon {
+    color: #fd6f6f;
+}

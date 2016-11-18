@@ -2307,7 +2307,7 @@ input[type=submit]:enabled:active {
 	padding: 0;
 	border-top: 1px solid #eee;
 	border-left: 1px solid #eee;
-	background-color: #f2f2f2
+	background-color: #f7f7f7;
 }
 
 .mui-grid-view.mui-grid-9:after,
@@ -4178,7 +4178,7 @@ body>.mui-progressbar {
 	display: inline-block;
 	text-decoration: none;
 	-webkit-font-smoothing: antialiased;
-	color: dodgerblue;
+	color: #4c4c4c;
 }
 
 .mui-icon.mui-active {
