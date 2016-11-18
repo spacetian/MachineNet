@@ -359,6 +359,7 @@
 		document.getElementById('exit').addEventListener('tap', function() {
 			if (mui.os.ios) {
 				app.setState({});
+				
 				mui.openWindow({
 					url: 'login.html',
 					id: 'login',
@@ -384,7 +385,10 @@
 				switch (index) {
 					case 1:
 						app.setState({});
-						localStorage.removeItem('$users')
+						localStorage.removeItem('$users');
+						localStorage.removeItem('username');
+						localStorage.removeItem('password');
+						
 						mui.openWindow({
 							url: 'login.html',
 							id: 'login',

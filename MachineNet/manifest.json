@@ -460,7 +460,9 @@
 			},
 			"Pages/SettingChannel.html": {
 				"resources": [
-					"Pages/MySetting.html"
+					"Pages/MySetting.html",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js"
 				],
 				"refer": [],
 				"priority": 0
