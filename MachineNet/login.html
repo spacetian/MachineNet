@@ -104,7 +104,7 @@
 	<body>
 
 		<header class="mui-bar mui-bar-nav">
-			<img src="images/LOGOV.png" class="navLogo"/>
+	
 			<h1 class="mui-title">上海允昌自动售货机管理平台</h1>
 		</header>
 		<div class="mui-content">
@@ -152,7 +152,7 @@
 				var state = app.getState();
 				var mainPage = mui.preload({
 					"id": 'main',
-					"url": 'main.html'
+					"url": 'MainUI.html'
 				});
 				var toMain = function() {
 					mui.fire(mainPage, 'show', null);
@@ -244,6 +244,7 @@
 				var autoLoginButton = document.getElementById("autoLogin");
 				var regButton = document.getElementById('reg');
 				var forgetButton = document.getElementById('forgetPassword');
+				var oauthArea = document.querySelector('.oauth-area');
 				loginButton.addEventListener('tap', function(event) {
 					var loginInfo = {
 						account: accountBox.value,

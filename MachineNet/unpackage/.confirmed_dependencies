@@ -1,73 +1,283 @@
 {
-  "guide.html": {
-    "resources": [
-      "css/mui.min.css",
-      "js/mui.js"
-    ],
-    "refer": [
-      "login.html"
-    ]
-  },
-  "login.html": {
-    "resources": [
-      "js/app.js",
-      "js/mui.min.js",
-      "js/mui.enterfocus.js",
-      "css/mui.min.css",
-      "images/weixin.png",
-      "images/qq.png",
-      "fonts/mui.ttf",
-      "css/app.css",
-      "css/style.css",
-      "fonts/mui-icons-extra.ttf",
-      "images/LOGOV.png"
-    ],
-    "refer": [
-      "main.html",
-      "reg.html",
-      "forget_password.html"
-    ]
-  },
-  "reg.html": {
-    "resources": [
-      "css/style.css"
-    ],
-    "refer": [
-      "login.html"
-    ]
-  },
-  "main.html": {
-    "resources": [
-      "js/app.js",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/app.css",
-      "images/60x60.gif",
-      "fonts/mui.ttf"
-    ],
-    "refer": [
-      "setting.html"
-    ]
-  },
-  "setting.html": {
-    "resources": [
-      "js/mui.locker.js",
-      "js/app.js",
-      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "libs/easymob-webim-sdk/json2.js",
-      "libs/easymob-webim-sdk/jquery-1.11.1.js",
-      "js/feedback.js",
-      "js/feedback-page.js",
-      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-      "js/mui.view.js",
-      "css/feedback-page.css",
-      "fonts/mui.ttf",
-      "css/style.css"
-    ],
-    "refer": [
-      "login.html"
-    ]
-  }
+	"guide.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.js"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"js/mui.enterfocus.js",
+			"css/mui.min.css",
+			"images/weixin.png",
+			"images/qq.png",
+			"fonts/mui.ttf",
+			"css/app.css",
+			"css/style.css",
+			"fonts/mui-icons-extra.ttf",
+			"images/LOGOV.png"
+		],
+		"refer": [
+			"main.html",
+			"reg.html",
+			"forget_password.html",
+			"MainUI.html",
+			"unlock.html",
+			"Pages/MainUI.html"
+		]
+	},
+	"reg.html": {
+		"resources": [
+			"css/style.css"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"main.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/app.css",
+			"images/60x60.gif",
+			"fonts/mui.ttf",
+			"Pages/Order_DetailByDay.html",
+			"images/LOGOV.png"
+		],
+		"refer": [
+			"setting.html",
+			"Pages/Order_DetailByDay.html"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"js/mui.locker.js",
+			"js/app.js",
+			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"libs/easymob-webim-sdk/json2.js",
+			"libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"js/feedback.js",
+			"js/feedback-page.js",
+			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+			"js/mui.view.js",
+			"css/feedback-page.css",
+			"fonts/mui.ttf",
+			"css/style.css"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"MainUI.html": {
+		"resources": [
+			"images/LOGOV.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"Pages/MyMachine.html",
+			"css/mui.min.css",
+			"js/app.js",
+			"css/app.css",
+			"css/style.css"
+		],
+		"refer": [
+			"Pages/MySetting.html",
+			"Pages/MyStock.html",
+			"Pages/MyOrder.html",
+			"Pages/MyMachine.html",
+			"setting.html"
+		]
+	},
+	"Pages/MyStock.html": {
+		"resources": [
+			"images/60x60.gif",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"Pages/StockByProduct.html",
+			"Pages/StockByMachine.html"
+		],
+		"refer": [
+			"Pages/StockByProduct.html",
+			"Pages/StockByMachine.html"
+		]
+	},
+	"Pages/MyOrder.html": {
+		"resources": [
+			"css/mui.minUI.css",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"Pages/Order_DetailByDay.html",
+			"Pages/OrderByMachine.html",
+			"Pages/OrderDetailByDay.html",
+			"Pages/OrderByPayType.html",
+			"Pages/OrderByMoney.html",
+			"Pages/OrderByProduct.html"
+		],
+		"refer": [
+			"Pages/Order_DetailByDay.html",
+			"Pages/OrderByMachine.html",
+			"Pages/OrderDetailByDay.html",
+			"Pages/OrderByPayType.html",
+			"Pages/OrderByMoney.html",
+			"Pages/OrderByProduct.html"
+		]
+	},
+	"Pages/MyMachine.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"Pages/MachineProduct.html",
+			"Pages/MachineStatus.html",
+			"Pages/MachineLocation.html"
+		],
+		"refer": [
+			"Pages/MachineProduct.html",
+			"Pages/MachineStatus.html",
+			"Pages/MachineLocation.html"
+		]
+	},
+	"Pages/MySetting.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"Pages/SettingChannelProductPic.html",
+			"Pages/SettingChannel.html"
+		],
+		"refer": [
+			"Pages/SettingChannelProductPic.html",
+			"Pages/SettingChannel.html"
+		]
+	},
+	"Pages/Order_DetailByDay.html": {
+		"resources": [
+			"main.html",
+			"Pages/MyOrder.html",
+			"images/60x60.gif"
+		],
+		"refer": [
+			"main.html",
+			"Pages/MyOrder.html"
+		]
+	},
+	"unlock.html": {
+		"resources": [
+			"js/mui.locker.js"
+		]
+	},
+	"Pages/MainUI.html": {
+		"resources": [
+			"css/app.css",
+			"Pages/MyMachine.html"
+		],
+		"refer": [
+			"Pages/MySetting.html",
+			"Pages/MyStock.html",
+			"Pages/MyOrder.html",
+			"Pages/MyMachine.html"
+		]
+	},
+	"Pages/MachineStatus.html": {
+		"resources": [
+			"Pages/MyMachine.html"
+		],
+		"refer": [
+			"Pages/MyMachine.html"
+		]
+	},
+	"Pages/MachineProduct.html": {
+		"resources": [
+			"Pages/MyMachine.html"
+		],
+		"refer": [
+			"Pages/MyMachine.html"
+		]
+	},
+	"Pages/MachineLocation.html": {
+		"resources": [
+			"Pages/MyMachine.html"
+		],
+		"refer": [
+			"Pages/MyMachine.html"
+		]
+	},
+	"Pages/StockByMachine.html": {
+		"resources": [
+			"Pages/MyMachine.html",
+			"Pages/MyStock.html"
+		],
+		"refer": [
+			"Pages/MyMachine.html",
+			"Pages/MyStock.html"
+		]
+	},
+	"Pages/SettingChannel.html": {
+		"resources": [
+			"Pages/MySetting.html"
+		],
+		"refer": [
+			"Pages/MySetting.html"
+		]
+	},
+	"Pages/SettingChannelProductPic.html": {
+		"resources": [
+			"Pages/MySetting.html",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"Pages/MySetting.html"
+		]
+	},
+	"Pages/OrderDetailByDay.html": {
+		"resources": [
+			"Pages/MyOrder.html",
+			"images/60x60.gif"
+		],
+		"refer": [
+			"Pages/MyOrder.html"
+		]
+	},
+	"Pages/OrderByMoney.html": {
+		"resources": [
+			"Pages/MyOrder.html"
+		],
+		"refer": [
+			"Pages/MyOrder.html"
+		]
+	},
+	"Pages/OrderByProduct.html": {
+		"resources": [
+			"Pages/MyOrder.html"
+		],
+		"refer": [
+			"Pages/MyOrder.html"
+		]
+	},
+	"Pages/OrderByMachine.html": {
+		"resources": [
+			"Pages/MyOrder.html"
+		],
+		"refer": [
+			"Pages/MyOrder.html"
+		]
+	},
+	"Pages/StockByProduct.html": {
+		"resources": [
+			"Pages/MyStock.html"
+		],
+		"refer": [
+			"Pages/MyStock.html"
+		]
+	}
 }

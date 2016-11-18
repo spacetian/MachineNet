@@ -4177,7 +4177,8 @@ body>.mui-progressbar {
 	line-height: 1;
 	display: inline-block;
 	text-decoration: none;
-	-webkit-font-smoothing: antialiased
+	-webkit-font-smoothing: antialiased;
+	color: dodgerblue;
 }
 
 .mui-icon.mui-active {
