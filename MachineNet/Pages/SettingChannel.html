@@ -73,6 +73,7 @@
 				<div class="mui-indexed-list-inner">
 					<div class="mui-indexed-list-empty-alert">没有数据</div>
 					<ul class="mui-table-view">
+						
 						<!--<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
 						<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">阿克苏机场</li>
 						<li data-value="BPL" data-tags="ALaShanKou" class="mui-table-view-cell mui-indexed-list-item">阿拉山口机场</li>
@@ -109,22 +110,98 @@
 			//create
 			window.indexedList = new mui.IndexedList(list);
 
-
-           
             try
             {     
-            	 var userName = localStorage.getItem("userName");
-                 var password = localStorage.getItem("password");
-                 console.log("[用户名]" + userName + "[密码]" + password);
-            	 var users = localStorage.getItem("$users");
+                 var userCode = localStorage.getItem("userCode");
+                 console.log("[用户编号]" + userCode);
+                 if(mui.os.plus){
+                 	mui.plusReady(function(){
+                 		GetMyMachineList(userCode);
+                 	})
+                 }
+                 
             }
             catch(e)
             {
             	mui.toast(e.message);
             }
-            
-            console.log(users);
+           
 		});
+		
+		function GetMyMachineList(userCode){
+			var url = "http://home.shj8.top/api/App/Machine/GetMyMachineList";
+			var jsonData = {
+				userCode: userCode
+			};
+			mui.ajax(url, {
+				data: jsonData,
+				dataType: 'json',
+				type: 'POST',
+				timeout: 10000,
+				success: function(data) {
+					console.log(" 登录信息返回值" + data);
+					plus.nativeUI.closeWaiting();
+				    var list = document.body.querySelector(".mui-table-view");
+				    
+				    var machineIndex = new Array();
+				    mui.each(data, function(index, item){
+				    	var indexSub = item.MachineCode.substr(0,1);
+				    	console.log("[machineCode】" + item.MachineCode + "[ChannelNum]" + item.ChannelNum);
+				    	if(machineIndex.length > 0 )
+				    	{
+				    		var isExsit = false;
+				    		mui.each(machineIndex, function(sIndex, sItem){
+				    			if(sItem == indexSub){
+				    				isExsit = true;
+				    			}
+				    		});
+				    		if(!isExsit)  // 当索引元素不存在，此时添加索引到索引数组，并将该索引的所有售货机编号添加至列表
+				    		{
+				    			machineIndex.push(indexSub);
+					    		console.log("[machineIndex.length]" +machineIndex.length + "[indexSub]" + indexSub);
+	//				    		<!--<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
+					    	    var liIndex = document.createElement("li");
+					    	    liIndex.className = "mui-table-view-divider mui-indexed-list-group";
+					    	    liIndex.setAttribute("data-group", indexSub);
+					    	    liIndex.innerHTML = indexSub;
+					    	    list.appendChild(liIndex);
+
+					    	    mui.each(data, function(indexS, itemS){
+					    			if(itemS.MachineCode.substr(0,1) == indexSub){
+					    				// <li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">阿克苏机场</li>
+								    	var li = document.createElement("li");
+								    	li.className = "mui-table-view-cell mui-indexed-list-item";
+								    	li.setAttribute("data-value", item.MachineCode.substr(0, 2));
+								    	li.setAttribute("data-tags", item.MachineCode);
+								    	li.innerHTML = item.MachineCode;
+								    	list.appendChild(li);
+					    			}
+					    		})
+				    		}
+				    	}
+				    	else{
+				    		machineIndex.push(item.MachineCode);
+				    	}
+				    	
+				    	// 1.0 动态加载数据标签后，搜索失灵的添加代码
+				    	var header = document.querySelector('header.mui-bar');
+						var listV = document.getElementById('list');
+						var done = document.getElementById('done');
+						//calc hieght
+						listV.style.height = (document.body.offsetHeight - header.offsetHeight) + 'px';
+						//create
+						window.indexedList = new mui.IndexedList(listV);
+						// end 1.0
+				    });
+				},
+				error: function(xhr, type, errorThrown) {
+					console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
+					plus.nativeUI.toast("网络错误");
+					return callback('用户名或密码错误');
+				
+				}
+			});
+		}
 
 	
 	</script>

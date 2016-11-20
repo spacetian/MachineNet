@@ -34,27 +34,25 @@
 				type: 'POST',
 				timeout: 10000,
 				success: function(data) {
-					console.log(" 登录信息返回值" + data);
+					console.log(" 登录信息返回值" + JSON.stringify(data));
 					plus.nativeUI.closeWaiting();
-				
-					if(data == "0"){
+					if(data.Result == "0"){
 						authed = true;
-						localStorage.setItem("userName", loginInfo.userName);
+						localStorage.setItem("userName", loginInfo.account);
 						localStorage.setItem('password', loginInfo.password);
+						localStorage.setItem('userCode', data.UserCode);
 						
 					    var users = JSON.parse(localStorage.getItem('$users') || '[]');
 						users.push(loginInfo);
 						localStorage.setItem('$users', JSON.stringify(users));
-											
-
+							
 	                    return owner.createState(loginInfo.account, callback);
-					}else if(data == "1"){
+					}else if(data.Result == "1"){
 						plus.nativeUI.toast("账号不存在");
-					}else if(data == "2"){
+					}else if(data.Result == "2"){
 						plus.nativeUI.toast("账号或密码错误");
 					}
 					
-
 				},
 				error: function(xhr, type, errorThrown) {
 					console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
