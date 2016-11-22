@@ -5,7 +5,7 @@
 		"iPad"
 	],
 	"id": "H5072B8FC",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "MachineNet",/*应用名称，程序桌面图标名称*/
+	"name": "售货机",/*应用名称，程序桌面图标名称*/
 	"version": {
 		"name": "1.0",/*应用版本名称*/
 		"code": ""
@@ -206,30 +206,30 @@
 			"splashscreen": {
 				"ios": {
 					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
-						"retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
-						"retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
-						"retina55l": ""
+						"default": "C:/Users/space/Pictures/start.png", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "C:/Users/space/Pictures/start.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "C:/Users/space/Pictures/start.png",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+						"retina47": "C:/Users/space/Pictures/start.png",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+						"retina55": "C:/Users/space/Pictures/start.png",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+						"retina55l": "C:/Users/space/Pictures/start.png"
 					},
 					"ipad": {
-						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": ""
+						"portrait": "C:/Users/space/Pictures/start.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "C:/Users/space/Pictures/start.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "C:/Users/space/Pictures/start.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "C:/Users/space/Pictures/start.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "C:/Users/space/Pictures/start.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "C:/Users/space/Pictures/start.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "C:/Users/space/Pictures/start.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "C:/Users/space/Pictures/start.png"
 					}
 				},
 				"android": {
-					"mdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/space/Pictures/Camera Roll/启动界面.png"
+					"mdpi": "C:/Users/space/Pictures/start.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "C:/Users/space/Pictures/start.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "C:/Users/space/Pictures/start.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/space/Pictures/start.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/space/Pictures/start.png"
 				}
 			}
 		}
