@@ -205,7 +205,10 @@
   },
   "Pages/MachineStatus.html": {
     "resources": [
-      "Pages/MyMachine.html"
+      "Pages/MyMachine.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
     ],
     "refer": [
       "Pages/MyMachine.html"
