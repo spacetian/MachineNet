@@ -179,7 +179,7 @@
 '							<div class="oa-contact-content mui-table-cell">				   '+
 '								<div class="mui-clearfix">								   '+
 '									<h4 class="oa-contact-name">'+ item.PayAmount +' 元</h4> '+ 
-                                   '<h3 style="float:right;">'+ item.Subject +'</h3> '+
+                                   '<h3 style="float:right;">'+ GetNotNullVal(item.Subject) +'</h3> '+
 '									<span class="oa-contact-position mui-h6"> ' + GetPayType(item.PayType) +  '支付</span>' +
 '								</div>													   '+
 '								<p class="oa-contact-email mui-h6">	[售货机编号]:'+ item.MachineCode  +'</p>'+
@@ -206,12 +206,21 @@
 			}
 		})
 		
-  function GetIsStatus(mObj) {
+        function GetIsStatus(mObj) {
             if (mObj == null || mObj == false) {
                 return "未";
             }
             else {
                 return "已";
+            }
+        }
+        
+         function GetNotNullVal(mObj) {
+            if (mObj == null ) {
+                return "";
+            }
+            else {
+                return mObj;
             }
         }
 
