@@ -170,7 +170,8 @@
     ],
     "refer": [
       "Pages/SettingChannelProductPic.html",
-      "Pages/SettingChannel.html"
+      "Pages/SettingChannel.html",
+      "Pages/Setting_ChannelUpdate.html"
     ]
   },
   "Pages/Order_DetailByDay.html": {
@@ -240,7 +241,11 @@
     "resources": [
       "Pages/MySetting.html",
       "css/mui.indexedlist.css",
-      "js/mui.indexedlist.js"
+      "js/mui.indexedlist.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
     ],
     "refer": [
       "Pages/MySetting.html"
@@ -296,5 +301,17 @@
     "refer": [
       "Pages/MyStock.html"
     ]
+  },
+  "Pages/Setting_ChannelUpdate.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/mui.indexedlist.css",
+      "js/mui.indexedlist.js",
+      "Pages/MySetting.html"
+    ],
+    "refer": []
   }
 }

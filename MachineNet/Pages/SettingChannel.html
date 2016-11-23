@@ -72,7 +72,7 @@
 				<div class="mui-indexed-list-alert"></div>
 				<div class="mui-indexed-list-inner">
 					<div class="mui-indexed-list-empty-alert">没有数据</div>
-					<ul class="mui-table-view">
+					<ul class="mui-table-view" id="mui-table-view">
 						
 						<!--<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
 						<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">阿克苏机场</li>
@@ -126,6 +126,25 @@
             	mui.toast(e.message);
             }
            
+            mui.plusReady(function(){
+            	
+            	mui("#mui-table-view").on("tap", "li", function(){
+            		var currentMachineCode = this.getAttribute("title");
+	                mui.openWindow({
+	            		id: "Setting_ChannelUpdate.html",
+	            		url: "Setting_ChannelUpdate.html",
+	            		extras:{
+	            			machineCode : currentMachineCode
+	            		},
+	            		waiting: {
+	            			autoShow: true
+	            		}
+	            	})
+	                console.log('open windows');
+            	})
+            	
+            	
+            })
 		});
 		
 		function GetMyMachineList(userCode){
@@ -146,7 +165,7 @@
 				    var machineIndex = new Array();
 				    mui.each(data, function(index, item){
 				    	var indexSub = item.MachineCode.substr(0,1);
-				    	console.log("[machineCode】" + item.MachineCode + "[ChannelNum]" + item.ChannelNum);
+//				    	console.log("[machineCode】" + item.MachineCode + "[ChannelNum]" + item.ChannelNum);
 				    	if(machineIndex.length > 0 )
 				    	{
 				    		var isExsit = false;
@@ -158,7 +177,7 @@
 				    		if(!isExsit)  // 当索引元素不存在，此时添加索引到索引数组，并将该索引的所有售货机编号添加至列表
 				    		{
 				    			machineIndex.push(indexSub);
-					    		console.log("[machineIndex.length]" +machineIndex.length + "[indexSub]" + indexSub);
+//					    		console.log("[machineIndex.length]" +machineIndex.length + "[indexSub]" + indexSub);
 	//				    		<!--<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
 					    	    var liIndex = document.createElement("li");
 					    	    liIndex.className = "mui-table-view-divider mui-indexed-list-group";
@@ -174,6 +193,7 @@
 								    	li.setAttribute("data-value", itemS.MachineCode.substr(0, 2));
 								    	li.setAttribute("data-tags", itemS.MachineCode);
 								    	li.innerHTML = itemS.MachineCode;
+                                        li.title = itemS.MachineCode;
 								    	list.appendChild(li);
 					    			}
 					    		})
@@ -203,7 +223,7 @@
 			});
 		}
 
-	
+	    
 	</script>
 
 </html>

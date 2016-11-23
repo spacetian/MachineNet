@@ -396,7 +396,8 @@
 					"Pages/SettingChannel.html",
 					"css/app.css",
 					"css/font-awesome.css",
-					"fonts/fontawesome-webfont.woff2"
+					"fonts/fontawesome-webfont.woff2",
+					"Pages/Setting_ChannelUpdate.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -462,7 +463,11 @@
 				"resources": [
 					"Pages/MySetting.html",
 					"css/mui.indexedlist.css",
-					"js/mui.indexedlist.js"
+					"js/mui.indexedlist.js",
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -508,6 +513,19 @@
 			"Pages/StockByProduct.html": {
 				"resources": [
 					"Pages/MyStock.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"Pages/Setting_ChannelUpdate.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js",
+					"Pages/MySetting.html"
 				],
 				"refer": [],
 				"priority": 0
