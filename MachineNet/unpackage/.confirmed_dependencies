@@ -171,7 +171,8 @@
 		"refer": [
 			"Pages/SettingChannelProductPic.html",
 			"Pages/SettingChannel.html",
-			"Pages/Setting_ChannelUpdate.html"
+			"Pages/Setting_ChannelUpdate.html",
+			"Pages/SettingChannelUpdate.html"
 		]
 	},
 	"Pages/Order_DetailByDay.html": {
@@ -318,5 +319,15 @@
 			"Pages/MySetting.html"
 		],
 		"refer": []
+	},
+	"Pages/SettingChannelUpdate.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/mui.indexedlist.css",
+			"js/mui.indexedlist.js"
+		]
 	}
 }

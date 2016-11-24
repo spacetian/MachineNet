@@ -62,7 +62,7 @@
 		</header>
 		<div class="mui-content">
 			<div class="mui-content-padded">
-				<button id='btnSelectDate' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">选择日期 ...</button>
+				<button id='btnSelectDate' data-options='{"type":"date"}' class="btn mui-btn mui-btn-primary mui-btn-block ">选择日期 ...</button>
 			</div>
 
 			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed" id="salesDiv">
@@ -179,7 +179,7 @@
 '							<div class="oa-contact-content mui-table-cell">				   '+
 '								<div class="mui-clearfix">								   '+
 '									<h4 class="oa-contact-name">'+ item.PayAmount +' 元</h4> '+ 
-                                   '<h3 style="float:right;">'+ GetNotNullVal(item.ProductName) +'</h3> '+
+                                   '<h5 style="float:right;">'+ GetNotNullVal(item.ProductName) +'</h5> '+
 '									<span class="oa-contact-position mui-h6"> ' + GetPayType(item.PayType) +  '支付 </span>' +
 '								</div>													   '+
 '								<p class="oa-contact-email mui-h6">	[交易时间]:'+ ChangeDateFormat(item.CreateDate, "yyyy-MM-dd HH:mm:ss")  +'</p>'+

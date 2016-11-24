@@ -399,7 +399,9 @@
 					"fonts/fontawesome-webfont.woff2",
 					"Pages/Setting_ChannelUpdate.html"
 				],
-				"refer": [],
+				"refer": [
+					"Pages/SettingChannelUpdate.html"
+				],
 				"priority": 0
 			},
 			"Pages/Order_DetailByDay.html": {
@@ -528,6 +530,18 @@
 					"css/mui.indexedlist.css",
 					"js/mui.indexedlist.js",
 					"Pages/MySetting.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"Pages/SettingChannelUpdate.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js"
 				],
 				"refer": [],
 				"priority": 0

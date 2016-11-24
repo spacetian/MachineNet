@@ -161,9 +161,7 @@
 						// li.innerHTML = "[" + item.MachineCode + "]" + item.ChannelCode;
 						
 						li.innerHTML = 
-						'<ul class="mui-table-view-cell">'+
-						'<li class="mui-table-view-cell mui-collapse mui-active">                                                                '+
-						'	<a class="mui-navigate-right" href="#">[货道编号]'+ item.ChannelCode +'</a>																	     '+
+						'	<a class="mui-navigate-right" href="#">[货道编号]'+ item.ChannelCode +'</a>											 '+
 						'	<div class="mui-collapse-content">																					 '+
 						'		<form class="mui-input-group" >																					 '+
 						'			<div class="mui-input-row">																					 '+
@@ -191,9 +189,8 @@
 						'				<button class="mui-btn mui-btn-primary" type="button" onclick="return false;">取消</button>			   '  +
 						'			</div>																										 '+
 						'		</form>																											 '+
-						'	</div>																												 '+
-						'</li>																													 '+
-						'</ul>';
+						'	</div>																												 ';
+						
 						li.title = item.ChannelCode;
 						list.appendChild(li);
 
