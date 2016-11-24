@@ -43,7 +43,7 @@
 				<div class="mui-indexed-list-search mui-input-row mui-search">
 					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索货道编号">
 				</div>
-				<div class="mui-indexed-list-bar">
+				<div class="mui-indexed-list-bar" >
 					<a>1</a>
 					<a>2</a>
 					<a>3</a>
@@ -53,7 +53,6 @@
 					<a>7</a>
 					<a>8</a>
 					<a>9</a>
-
 				</div>
 				<div class="mui-indexed-list-alert"></div>
 				<div class="mui-indexed-list-inner">
@@ -96,7 +95,7 @@
 		//		}
 
 		mui.ready(function() {
-			InitIndexList(); // 初始化Index List 控件
+//			InitIndexList(); // 初始化Index List 控件
 			mui.plusReady(function() {
 				mui.toast("[货道信息修改] 已初始化");
 				var userCode = localStorage.getItem("userCode"); // 1.0 获取用户编号信息
@@ -156,24 +155,52 @@
 
 						// <li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">阿克苏机场</li>
 						var li = document.createElement("li");
-						li.className = "mui-table-view-cell mui-indexed-list-item";
+						li.className = "mui-table-view-cell mui-indexed-list-item mui-collapse mui-active";
 						li.setAttribute("data-value", item.ChannelCode);
 						li.setAttribute("data-tags", item.ChannelCode);
-						li.innerHTML = "[" + item.MachineCode + "]" + item.ChannelCode;
+						// li.innerHTML = "[" + item.MachineCode + "]" + item.ChannelCode;
+						
+						li.innerHTML = 
+						'<ul class="mui-table-view-cell">'+
+						'<li class="mui-table-view-cell mui-collapse mui-active">                                                                '+
+						'	<a class="mui-navigate-right" href="#">[货道编号]'+ item.ChannelCode +'</a>																	     '+
+						'	<div class="mui-collapse-content">																					 '+
+						'		<form class="mui-input-group" >																					 '+
+						'			<div class="mui-input-row">																					 '+
+						'				<label>商品名称</label>																					 '+
+						'				<input type="text" placeholder="请输入商品名称">														     '+
+						'			</div>																										 '+
+						'			<div class="mui-input-row">																					 '+
+						'				<label>已售商品数量</label>																					 '+
+						'				<input type="text" class="mui-input-clear" />						     '+
+						'			</div>																										 '+
+						'			<div class="mui-input-row">																					 '+
+						'				<label>商品价格</label>																					 '+
+						'				<input type="text" class="mui-input-clear" />元						     '+
+						'			</div>																										 '+
+						'			<div class="mui-input-row">																					 '+
+						'				<label>可售商品数量</label>																					 '+
+						'				<input type="text" class="mui-input-clear" />					     '+
+						'			</div>																										 '+
+						'			<div class="mui-input-row">																					 '+
+						'				<label>货道容量</label>																					 '+
+						'				<input type="text" class="mui-input-clear" />						     '+
+						'			</div>																										 '+
+						'			<div class="mui-button-row">																				 '+
+						'				<button class="mui-btn mui-btn-primary" type="button" data="'+ JSON.stringify(item) +'">确认</button>&nbsp;&nbsp;  '+
+						'				<button class="mui-btn mui-btn-primary" type="button" onclick="return false;">取消</button>			   '  +
+						'			</div>																										 '+
+						'		</form>																											 '+
+						'	</div>																												 '+
+						'</li>																													 '+
+						'</ul>';
 						li.title = item.ChannelCode;
 						list.appendChild(li);
 
 					});
 
 					// 1.0 动态加载数据标签后，搜索失灵的添加代码
-					var header = document.querySelector('header.mui-bar');
-
-					var done = document.getElementById('done');
-					//calc hieght
-					list.style.height = (document.body.offsetHeight - header.offsetHeight) + 'px';
-					//create
-					window.indexedList = new mui.IndexedList(list);
-					// end 1.0
+					InitIndexList();
 				},
 				error: function(xhr, type, errorThrown) {
 					console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
