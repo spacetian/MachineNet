@@ -150,7 +150,7 @@
 						var liIndex = document.createElement("li");
 						liIndex.className = "mui-table-view-divider mui-indexed-list-group";
 						liIndex.setAttribute("data-group", item.ChannelCode);
-						liIndex.innerHTML = item.ChannelCode;
+//						liIndex.innerHTML = item.ChannelCode;
 						list.appendChild(liIndex);
 
 						// <li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">阿克苏机场</li>
@@ -184,9 +184,8 @@
 						'				<label>货道容量</label>																					 '+
 						'				<input type="text" class="mui-input-clear" />						     '+
 						'			</div>																										 '+
-						'			<div class="mui-button-row">																				 '+
-						'				<button class="mui-btn mui-btn-primary" type="button" data="'+ JSON.stringify(item) +'">确认</button>&nbsp;&nbsp;  '+
-						'				<button class="mui-btn mui-btn-primary" type="button" onclick="return false;">取消</button>			   '  +
+						'			<div class="mui-button-row" style="pading:10px; line-height:50px;margin:10px;">																				 '+
+						'				<button class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style="line-height:10px;" type="button" data="'+ JSON.stringify(item) +'">保存</button>&nbsp;&nbsp;  '+
 						'			</div>																										 '+
 						'		</form>																											 '+
 						'	</div>																												 ';
