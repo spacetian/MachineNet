@@ -179,9 +179,10 @@
 '							<div class="oa-contact-content mui-table-cell">				   '+
 '								<div class="mui-clearfix">								   '+
 '									<h4 class="oa-contact-name">'+ item.PayAmount +' 元</h4> '+ 
-                                   '<h3 style="float:right;">'+ GetNotNullVal(item.Subject) +'</h3> '+
-'									<span class="oa-contact-position mui-h6"> ' + GetPayType(item.PayType) +  '支付</span>' +
+                                   '<h3 style="float:right;">'+ GetNotNullVal(item.ProductName) +'</h3> '+
+'									<span class="oa-contact-position mui-h6"> ' + GetPayType(item.PayType) +  '支付 </span>' +
 '								</div>													   '+
+'								<p class="oa-contact-email mui-h6">	[交易时间]:'+ ChangeDateFormat(item.CreateDate, "yyyy-MM-dd HH:mm:ss")  +'</p>'+
 '								<p class="oa-contact-email mui-h6">	[售货机编号]:'+ item.MachineCode  +'</p>'+
 '								<p class="oa-contact-email mui-h6"> [货道编号]：'+ item.ChannelCode +'</p>'+
 '								<p class="oa-contact-email mui-h6">	[付款状态]: '+ GetIsStatus(item.IsPayComplated) +'付款 </p>'+
@@ -273,6 +274,31 @@
             }
             return mObj;
         }
+        
+        /*
+		* json Date格式转日期格式
+		* jsondate: 传入的日期，formate：格式化样式(yyyy-MM-dd, yyyy-MM-dd HH:mm:ss)
+		*/
+		function ChangeDateFormat(jsondate, formate) {
+		    if (jsondate == "")
+		        return "";
+		    if (jsondate != null) {
+		        var date = new Date(parseInt(jsondate.replace("/Date(", "").replace(")/", ""), 10));
+		        var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+		        var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+		        var minu = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+		        var sec = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+		        var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+		        var data_str = date.getFullYear() + "-" + month + "-" + currentDate;
+		        if (data_str == "1900-01-01") return "";
+		        if (hour == "00" && sec == "00" && minu == "00") {
+		            return data_str;
+		        } else {
+		            return data_str + "\r\t" + hour + ":" + minu + ":" + sec;
+		        }
+		    }
+		    return "";
+		}
 	</script>
 
 </html>
