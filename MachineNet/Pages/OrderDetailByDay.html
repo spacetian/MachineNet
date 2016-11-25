@@ -58,7 +58,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class=" mui-icon mui-icon-left-nav mui-pull-left" href="MyOrder.html"></a>
-			<h1 class="mui-title">每天销售记录明细[<span id='result' class="ui-alert"></span>]</h1>
+			<h1 class="mui-title">每天销售记录明细<span id='result' class="ui-alert"></span></h1>
 		</header>
 		<div class="mui-content">
 			<div class="mui-content-padded">
@@ -121,7 +121,7 @@
 							 * rs.h 时，用法同年
 							 * rs.i 分（minutes 的第二个字母），用法同年
 							 */
-							result.innerText = ' ' + rs.text;
+							result.innerText = ' [' + rs.text + ' ]';
 
 							/* 
 							 * 返回 false 可以阻止选择框的关闭

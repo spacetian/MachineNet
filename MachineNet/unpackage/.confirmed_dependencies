@@ -270,7 +270,8 @@
 			"Pages/MyOrder.html",
 			"images/60x60.gif",
 			"js/mui.picker.min.js",
-			"css/mui.picker.min.css"
+			"css/mui.picker.min.css",
+			"fonts/mui.ttf"
 		],
 		"refer": [
 			"Pages/MyOrder.html"
@@ -327,7 +328,11 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"css/mui.indexedlist.css",
-			"js/mui.indexedlist.js"
+			"js/mui.indexedlist.js",
+			"Pages/SettingChannelUpdate.html"
+		],
+		"refer": [
+			"Pages/SettingChannelUpdate.html"
 		]
 	}
 }
