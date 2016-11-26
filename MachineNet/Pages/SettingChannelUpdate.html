@@ -209,7 +209,7 @@
 					// 1.0 动态加载数据标签后，搜索失灵的添加代码
 					InitIndexList();
 					//                  SaveChannelData();
-					document.querySelector('.btnSave').addEventListener('tap', function() {
+					mui('.mui-table-view').on('tap','button', function() {
 					// 1.1 获取被修改的值
 					//				.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode
 					var channelData = {};
