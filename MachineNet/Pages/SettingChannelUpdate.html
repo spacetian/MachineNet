@@ -29,10 +29,14 @@
 				-webkit-box-shadow: none;
 				box-shadow: none;
 			}
-			.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode {
+			
+			.txtMachineCode,
+			.txtChannelCode,
+			.txtPictureCode,
+			.txtPictureUrl,
+			.txtProductCode {
 				display: none;
 			}
-
 		</style>
 	</head>
 
@@ -165,14 +169,14 @@
 						li.innerHTML =
 							'	<a class="mui-navigate-right" href="#">' + item.ChannelCode + '</a>											 ' +
 							'	<div class="mui-collapse-content">											 ' +
-							'		<form class="mui-input-group" >																					 ' +
+							'		<div class="mui-input-group" >																					 ' +
 							'			<div class="mui-input-row">																					 ' +
 							'				<label>商品名称</label>																					 ' +
 							'				<input type="text" class="txtMachineCode"  value="' + item.MachineCode + '" > ' +
 							'				<input type="text" class="txtChannelCode"  value="' + item.ChannelCode + '" > ' +
-			                '				<input type="text" class="txtPictureCode"  value="' + item.PictureCode + '" > ' +
-							'				<input type="text" class="txtPictureUrl"  value="' + item.PictureUrl + '" > ' +	
-							'				<input type="text" class="txtProductCode"  value="' + item.ProductCode + '" > ' +								
+							'				<input type="text" class="txtPictureCode"  value="' + item.PictureCode + '" > ' +
+							'				<input type="text" class="txtPictureUrl"  value="' + item.PictureUrl + '" > ' +
+							'				<input type="text" class="txtProductCode"  value="' + item.ProductCode + '" > ' +
 							'				<input type="text" class="txtProductName" placeholder="请输入商品名称" value="' + item.ProductName + '" > ' +
 							'			</div>																										 ' +
 							'			<div class="mui-input-row">																					 ' +
@@ -181,7 +185,7 @@
 							'			</div>																										 ' +
 							'			<div class="mui-input-row">																					 ' +
 							'				<label>商品价格</label>																					 ' +
-							'				<input type="text" class="txtPrice1" value="' + item.Price1 + '" placeholder="请输入商品价格" />元		         ' +
+							'				<input type="text" class="txtPrice1" value="' + item.ChannelPrice + '" placeholder="请输入商品价格" />元		         ' +
 							'			</div>																										 ' +
 							'			<div class="mui-input-row">																					 ' +
 							'				<label>可售商品数</label>																				 ' +
@@ -194,7 +198,7 @@
 							'			<div class="mui-button-row" style="pading:10px; line-height:50px;margin:10px;">								 ' +
 							'				<button class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined btnSave" style="line-height:10px;" >保存</button> ' +
 							'			</div>																										 ' +
-							'		</form>																											 ' +
+							'		</div>																											 ' +
 							'	</div>																												 ';
 
 						li.title = item.ChannelCode;
@@ -204,62 +208,60 @@
 
 					// 1.0 动态加载数据标签后，搜索失灵的添加代码
 					InitIndexList();
-                    SaveChannelData();
+					//                  SaveChannelData();
+					document.querySelector('.btnSave').addEventListener('tap', function() {
+					// 1.1 获取被修改的值
+					//				.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode
+					var channelData = {};
+					console.log("1" + this.parentNode.parentNode.querySelector(".txtProductName").value);
+					channelData.MachineCode = this.parentNode.parentNode.querySelector(".txtMachineCode").value;
+					channelData.ChannelCode = this.parentNode.parentNode.querySelector(".txtChannelCode").value;
+					channelData.PictureCode = this.parentNode.parentNode.querySelector(".txtPictureCode").value;
+					channelData.PictureUrl = this.parentNode.parentNode.querySelector(".txtPictureUrl").value;
+					channelData.ProductCode = this.parentNode.parentNode.querySelector(".txtProductCode").value;
+					channelData.ProductName = this.parentNode.parentNode.querySelector(".txtProductName").value;
+					channelData.Price1 = this.parentNode.parentNode.querySelector(".txtPrice1").value;
+					channelData.Creator = localStorage.getItem("userCode");
+					channelData.ProductNum = this.parentNode.parentNode.querySelector(".txtProductNum").value;
+					channelData.CapacityNum = this.parentNode.parentNode.querySelector(".txtCapacityNum").value;
+
+					console.log("[channelData]" + JSON.stringify(channelData));
+					// 1.2 保存被修改货道的值
+					var url = "http://home.shj8.top/api/App/Machine/SaveChannelInfo";
+
+					mui.ajax(url, {
+						data: {
+							"userCode": channelData.Creator,
+							"machineCode": channelData.MachineCode,
+							"channelDataStr": JSON.stringify(channelData)
+						},
+						dataType: 'json',
+						type: 'POST',
+						timeout: 15000,
+						success: function(data) {
+							console.log(data);
+						},
+						error: function(xhr, type, errorThrown) {
+							console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
+							plus.nativeUI.toast("网络错误");
+						}
+					});
+
+				})
 				},
 				error: function(xhr, type, errorThrown) {
 					console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
 					plus.nativeUI.toast("网络错误");
-			
+
 				}
 			})
 		}
 
-        mui.ready(function(){
-        	mui.plusReady(){
-        		document.querySelector('.btnSave').addEventListener('tap', function() {
-				// 1.1 获取被修改的值
-//				.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode
-				var channelData = {};
-				console.log("1" + this.parentNode.parentNode.querySelector(".txtProductName").value);
-				channelData.MachineCode = this.parentNode.parentNode.querySelector(".txtMachineCode").value;
-				channelData.ChannelCode = this.parentNode.parentNode.querySelector(".txtChannelCode").value;
-				channelData.PictureCode = this.parentNode.parentNode.querySelector(".txtPictureCode").value;
-				channelData.PictureUrl = this.parentNode.parentNode.querySelector(".txtPictureUrl").value;
-				channelData.ProductCode = this.parentNode.parentNode.querySelector(".txtProductCode").value;
-				channelData.ProductName = this.parentNode.parentNode.querySelector(".txtProductName").value;
-				channelData.Price1 = this.parentNode.parentNode.querySelector(".txtPrice1").value;
-				channelData.Creator = localStorage.getItem("userCode");
-				channelData.ProductNum = this.parentNode.parentNode.querySelector(".txtProductNum").value;
-				channelData.CapacityNum = this.parentNode.parentNode.querySelector(".txtCapacityNum").value;
 
-				console.log("[channelData]" + JSON.stringify(channelData) );
-				// 1.2 保存被修改货道的值
-				var url = "http://home.shj8.top/api/App/Machine/SaveChannelInfo";
-
-				mui.ajax(url, {
-					data:{"userCode": channelData.Creator,
-					      "machineCode": channelData.MachineCode,
-					      "channelDataStr": JSON.stringify(channelData)
-					},
-					dataType: 'json',
-					type: 'POST',
-					timeout: 15000,
-					success: function(data) {
-                        console.log(data);
-					},
-					error: function(xhr, type, errorThrown) {
-						console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
-						plus.nativeUI.toast("网络错误");
-					}
-				});
-
-			})
-        	}
-        })
 		function SaveChannelData() {
 			document.querySelector('.btnSave').addEventListener('tap', function() {
 				// 1.1 获取被修改的值
-//				.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode
+				//				.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode
 				var channelData = {};
 				console.log("1" + this.parentNode.parentNode.querySelector(".txtProductName").value);
 				channelData.MachineCode = this.parentNode.parentNode.querySelector(".txtMachineCode").value;
@@ -273,20 +275,21 @@
 				channelData.ProductNum = this.parentNode.parentNode.querySelector(".txtProductNum").value;
 				channelData.CapacityNum = this.parentNode.parentNode.querySelector(".txtCapacityNum").value;
 
-				console.log("[channelData]" + JSON.stringify(channelData) );
+				console.log("[channelData]" + JSON.stringify(channelData));
 				// 1.2 保存被修改货道的值
 				var url = "http://home.shj8.top/api/App/Machine/SaveChannelInfo";
 
 				mui.ajax(url, {
-					data:{"userCode": channelData.Creator,
-					      "machineCode": channelData.MachineCode,
-					      "channelDataStr": JSON.stringify(channelData)
+					data: {
+						"userCode": channelData.Creator,
+						"machineCode": channelData.MachineCode,
+						"channelDataStr": JSON.stringify(channelData)
 					},
 					dataType: 'json',
 					type: 'POST',
 					timeout: 15000,
 					success: function(data) {
-                        console.log(data);
+						console.log(data);
 					},
 					error: function(xhr, type, errorThrown) {
 						console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
