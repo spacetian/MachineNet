@@ -209,49 +209,8 @@
 
 					// 1.0 动态加载数据标签后，搜索失灵的添加代码
 					InitIndexList();
-					//                  SaveChannelData();
-					mui('.mui-table-view').on('tap', 'button', function() {
-						// 1.1 获取被修改的值
-						//				.txtMachineCode, .txtChannelCode, .txtPictureCode, .txtPictureUrl,.txtProductCode
-						var channelData = {};
-						console.log("1" + this.parentNode.parentNode.querySelector(".txtProductName").value);
-						channelData.MachineCode = this.parentNode.parentNode.querySelector(".txtMachineCode").value;
-						channelData.ChannelCode = this.parentNode.parentNode.querySelector(".txtChannelCode").value;
-						channelData.PictureCode = this.parentNode.parentNode.querySelector(".txtPictureCode").value;
-						channelData.PictureUrl = this.parentNode.parentNode.querySelector(".txtPictureUrl").value;
-						channelData.ProductCode = this.parentNode.parentNode.querySelector(".txtProductCode").value;
-						channelData.ProductName = this.parentNode.parentNode.querySelector(".txtProductName").value;
-						channelData.Price1 = this.parentNode.parentNode.querySelector(".txtPrice1").value;
-						channelData.Creator = localStorage.getItem("userCode");
-						channelData.ProductNum = this.parentNode.parentNode.querySelector(".txtProductNum").value;
-						channelData.CapacityNum = this.parentNode.parentNode.querySelector(".txtCapacityNum").value;
+				    SaveChannelData(); // 1. 1 保存货道信息
 
-						console.log("[channelData]" + JSON.stringify(channelData));
-						// 1.2 保存被修改货道的值
-						var url = "http://home.shj8.top/api/App/Machine/SaveChannelInfo";
-						mui.ajax(url, {
-							data: {
-								"userCode": channelData.Creator,
-								"machineCode": channelData.MachineCode,
-								"channelDataStr": JSON.stringify(channelData)
-							},
-							dataType: 'json',
-							type: 'POST',
-							timeout: 15000,
-							success: function(data) {
-								console.log(data);
-
-								mui.alert("保存成功！", "货道信息更新", function() {
-									info.innerText = "保存货道信息成功";
-								})
-							},
-							error: function(xhr, type, errorThrown) {
-								console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
-								plus.nativeUI.toast("网络错误");
-							}
-						});
-
-					})
 				},
 				error: function(xhr, type, errorThrown) {
 					console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
