@@ -149,12 +149,14 @@
 			"Pages/MachineLocation.html",
 			"css/app.css",
 			"css/font-awesome.css",
-			"fonts/fontawesome-webfont.woff2"
+			"fonts/fontawesome-webfont.woff2",
+			"Pages/MyMachineStatus.html"
 		],
 		"refer": [
 			"Pages/MachineProduct.html",
 			"Pages/MachineStatus.html",
-			"Pages/MachineLocation.html"
+			"Pages/MachineLocation.html",
+			"Pages/MyMachineStatus.html"
 		]
 	},
 	"Pages/MySetting.html": {
@@ -333,6 +335,12 @@
 		],
 		"refer": [
 			"Pages/SettingChannelUpdate.html"
+		]
+	},
+	"Pages/MyMachineStatus.html": {
+		"resources": [
+			"js/mui.pullToRefresh.js",
+			"js/mui.pullToRefresh.material.js"
 		]
 	}
 }

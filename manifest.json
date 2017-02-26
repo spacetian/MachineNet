@@ -1,4 +1,4 @@
-﻿{
+{
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H5072B8FC",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "MachineNet",/*应用名称，程序桌面图标名称*/
@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "guide.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "MachineNet/guide.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -101,7 +101,7 @@
         },
         "NativeObj":{
         	"description": "原生对象"
-        }
+        },"Share":{}
     },
     "plus": {
         "splashscreen": {
@@ -111,7 +111,7 @@
         "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
         "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
         "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
-        "distribute": {"plugins":{"oauth":{}},
+        "distribute": {"plugins":{"share":{"weixin":{"appid":"wxf456391e427c0346","appsecret":"e4c887ba7577a6d54f584b937cc35efc","description":"可选，微信分享"}},"oauth":{}},
             "apple": {
                 "appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
                 "mobileprovision": "",/*iOS应用打包配置文件*/
@@ -232,6 +232,119 @@
 				"refer": [
 					"login.html"
 				],
+				"priority": 0
+			},
+			"MachineNet/setting.html": {
+				"resources": [
+					"MachineNet/libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+					"MachineNet/libs/easymob-webim-sdk/json2.js",
+					"MachineNet/libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+					"MachineNet/libs/easymob-webim-sdk/jquery-1.11.1.js",
+					"MachineNet/css/feedback-page.css",
+					"MachineNet/js/feedback.js",
+					"MachineNet/js/mui.view.js",
+					"MachineNet/js/mui.locker.js",
+					"MachineNet/js/feedback-page.js",
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/css/style.css",
+					"MachineNet/js/app.js",
+					"MachineNet/css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"MachineNet/guide.html": {
+				"resources": [
+					"MachineNet/js/mui.js",
+					"MachineNet/css/mui.min.css"
+				],
+				"refer": [
+					"MachineNet/login.html"
+				],
+				"priority": 0
+			},
+			"MachineNet/login.html": {
+				"resources": [
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/images/logo.png",
+					"MachineNet/css/style.css",
+					"MachineNet/js/app.js",
+					"MachineNet/js/mui.min.js",
+					"MachineNet/css/mui.min.css"
+				],
+				"refer": [
+					"MachineNet/MainUI.html"
+				],
+				"priority": 0
+			},
+			"MachineNet/MainUI.html": {
+				"resources": [
+					"MachineNet/css/app.css",
+					"MachineNet/Pages/MyMachine.html",
+					"MachineNet/css/font-awesome.css",
+					"MachineNet/fonts/fontawesome-webfont.woff2",
+					"MachineNet/css/style.css",
+					"MachineNet/js/mui.min.js",
+					"MachineNet/css/mui.min.css",
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/js/app.js"
+				],
+				"refer": [
+					"MachineNet/setting.html",
+					"MachineNet/Pages/MySetting.html",
+					"MachineNet/Pages/MyOrder.html",
+					"MachineNet/Pages/MyStock.html"
+				],
+				"priority": 0
+			},
+			"MachineNet/Pages/OrderDetailByDay.html": {
+				"resources": [
+					"MachineNet/js/mui.picker.min.js",
+					"MachineNet/css/mui.picker.min.css",
+					"MachineNet/images/60x60.gif",
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"MachineNet/Pages/MyOrder.html": {
+				"resources": [
+					"MachineNet/Pages/OrderDetailByDay.html",
+					"MachineNet/fonts/fontawesome-webfont.woff2"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"MachineNet/Pages/MyMachine.html": {
+				"resources": [
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/css/app.css",
+					"MachineNet/js/mui.min.js",
+					"MachineNet/css/font-awesome.css",
+					"MachineNet/css/mui.min.css",
+					"MachineNet/fonts/fontawesome-webfont.woff2",
+					"MachineNet/Pages/MyMachineStatus.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"MachineNet/Pages/MyStock.html": {
+				"resources": [
+					"MachineNet/fonts/fontawesome-webfont.woff2"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"MachineNet/Pages/MyMachineStatus.html": {
+				"resources": [
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/js/mui.pullToRefresh.material.js",
+					"MachineNet/js/mui.min.js",
+					"MachineNet/js/mui.pullToRefresh.js",
+					"MachineNet/css/mui.min.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

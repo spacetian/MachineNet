@@ -382,7 +382,8 @@
 					"Pages/MachineLocation.html",
 					"css/app.css",
 					"css/font-awesome.css",
-					"fonts/fontawesome-webfont.woff2"
+					"fonts/fontawesome-webfont.woff2",
+					"Pages/MyMachineStatus.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -434,7 +435,10 @@
 			},
 			"Pages/MachineStatus.html": {
 				"resources": [
-					"Pages/MyMachine.html"
+					"Pages/MyMachine.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -544,6 +548,14 @@
 					"css/mui.indexedlist.css",
 					"js/mui.indexedlist.js",
 					"Pages/SettingChannelUpdate.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"Pages/MyMachineStatus.html": {
+				"resources": [
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js"
 				],
 				"refer": [],
 				"priority": 0
