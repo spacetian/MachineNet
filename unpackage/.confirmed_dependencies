@@ -1,266 +1,266 @@
 {
-	"MachineNet/setting.html": {
-		"resources": [
-			"MachineNet/libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-			"MachineNet/libs/easymob-webim-sdk/json2.js",
-			"MachineNet/libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-			"MachineNet/libs/easymob-webim-sdk/jquery-1.11.1.js",
-			"MachineNet/css/feedback-page.css",
-			"MachineNet/js/feedback.js",
-			"MachineNet/js/mui.view.js",
-			"MachineNet/js/mui.locker.js",
-			"MachineNet/js/feedback-page.js",
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/css/style.css",
-			"MachineNet/js/app.js",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": []
-	},
-	"MachineNet/guide.html": {
-		"resources": [
-			"MachineNet/js/mui.js",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/login.html"
-		]
-	},
-	"MachineNet/login.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/images/LOGOV.png",
-			"MachineNet/css/style.css",
-			"MachineNet/js/app.js",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css",
-			"MachineNet/images/logo.png"
-		],
-		"refer": [
-			"MachineNet/MainUI.html"
-		]
-	},
-	"MachineNet/MainUI.html": {
-		"resources": [
-			"MachineNet/css/app.css",
-			"MachineNet/Pages/MyMachine.html",
-			"MachineNet/css/font-awesome.css",
-			"MachineNet/fonts/fontawesome-webfont.woff2",
-			"MachineNet/css/style.css",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css",
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/app.js"
-		],
-		"refer": [
-			"MachineNet/setting.html",
-			"MachineNet/Pages/MySetting.html",
-			"MachineNet/Pages/MyMachine.html",
-			"MachineNet/Pages/MyOrder.html",
-			"MachineNet/Pages/MyStock.html"
-		]
-	},
-	"MachineNet/Pages/OrderDetailByDay.html": {
-		"resources": [
-			"MachineNet/js/mui.picker.min.js",
-			"MachineNet/css/mui.picker.min.css",
-			"MachineNet/images/60x60.gif",
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/MyOrder.html",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyOrder.html"
-		]
-	},
-	"MachineNet/Pages/MyOrder.html": {
-		"resources": [
-			"MachineNet/Pages/OrderDetailByDay.html",
-			"MachineNet/fonts/fontawesome-webfont.woff2",
-			"MachineNet/css/app.css",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/OrderByMachine.html",
-			"MachineNet/css/font-awesome.css",
-			"MachineNet/css/mui.min.css",
-			"MachineNet/Pages/OrderByProduct.html",
-			"MachineNet/Pages/OrderByPayType.html",
-			"MachineNet/Pages/OrderByMoney.html"
-		],
-		"refer": [
-			"MachineNet/Pages/OrderDetailByDay.html",
-			"MachineNet/Pages/OrderByMachine.html",
-			"MachineNet/Pages/OrderByProduct.html",
-			"MachineNet/Pages/OrderByPayType.html",
-			"MachineNet/Pages/OrderByMoney.html"
-		]
-	},
-	"MachineNet/Pages/MyMachine.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/css/app.css",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/font-awesome.css",
-			"MachineNet/css/mui.min.css",
-			"MachineNet/fonts/fontawesome-webfont.woff2",
-			"MachineNet/Pages/MyMachineStatus.html",
-			"MachineNet/Pages/MachineProduct.html",
-			"MachineNet/Pages/MachineLocation.html"
-		],
-		"refer": [
-			"MachineNet/Pages/MyMachineStatus.html",
-			"MachineNet/Pages/MachineProduct.html",
-			"MachineNet/Pages/MachineLocation.html"
-		]
-	},
-	"MachineNet/Pages/MyStock.html": {
-		"resources": [
-			"MachineNet/fonts/fontawesome-webfont.woff2",
-			"MachineNet/Pages/StockByProduct.html",
-			"MachineNet/css/app.css",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/font-awesome.css",
-			"MachineNet/css/mui.min.css",
-			"MachineNet/Pages/StockByMachine.html"
-		],
-		"refer": [
-			"MachineNet/Pages/StockByProduct.html",
-			"MachineNet/Pages/StockByMachine.html"
-		]
-	},
-	"MachineNet/Pages/MyMachineStatus.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.pullToRefresh.material.js",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/js/mui.pullToRefresh.js",
-			"MachineNet/css/mui.min.css",
-			"MachineNet/Pages/MyMachine.html"
-		],
-		"refer": [
-			"MachineNet/Pages/MyMachine.html"
-		]
-	},
-	"MachineNet/Pages/OrderByMachine.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/MyOrder.html",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyOrder.html"
-		]
-	},
-	"MachineNet/Pages/StockByProduct.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/MyStock.html",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyStock.html"
-		]
-	},
-	"MachineNet/Pages/MySetting.html": {
-		"resources": [
-			"MachineNet/css/app.css",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/SettingChannel.html",
-			"MachineNet/css/font-awesome.css",
-			"MachineNet/fonts/fontawesome-webfont.woff2",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/SettingChannel.html",
-			"MachineNet/Pages/SettingChannelUpdate.html"
-		]
-	},
-	"MachineNet/Pages/SettingChannel.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/css/mui.indexedlist.css",
-			"MachineNet/Pages/MySetting.html",
-			"MachineNet/js/mui.indexedlist.js",
-			"MachineNet/js/app.js",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MySetting.html"
-		]
-	},
-	"MachineNet/Pages/MachineProduct.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/Pages/MyMachine.html",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyMachine.html"
-		]
-	},
-	"MachineNet/Pages/MachineLocation.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/Pages/MyMachine.html",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyMachine.html"
-		]
-	},
-	"MachineNet/Pages/OrderByProduct.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/MyOrder.html",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyOrder.html"
-		]
-	},
-	"MachineNet/Pages/OrderByPayType.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/MyOrder.html",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyOrder.html"
-		]
-	},
-	"MachineNet/Pages/OrderByMoney.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/Pages/MyOrder.html",
-			"MachineNet/css/mui.min.css"
-		],
-		"refer": [
-			"MachineNet/Pages/MyOrder.html"
-		]
-	},
-	"MachineNet/Pages/StockByMachine.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css"
-		]
-	},
-	"MachineNet/Pages/SettingChannelUpdate.html": {
-		"resources": [
-			"MachineNet/fonts/mui.ttf",
-			"MachineNet/css/mui.indexedlist.css",
-			"MachineNet/js/mui.indexedlist.js",
-			"MachineNet/js/app.js",
-			"MachineNet/js/mui.min.js",
-			"MachineNet/css/mui.min.css"
-		]
-	}
+  "MachineNet/setting.html": {
+    "resources": [
+      "MachineNet/libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+      "MachineNet/libs/easymob-webim-sdk/json2.js",
+      "MachineNet/libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+      "MachineNet/libs/easymob-webim-sdk/jquery-1.11.1.js",
+      "MachineNet/css/feedback-page.css",
+      "MachineNet/js/feedback.js",
+      "MachineNet/js/mui.view.js",
+      "MachineNet/js/mui.locker.js",
+      "MachineNet/js/feedback-page.js",
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/css/style.css",
+      "MachineNet/js/app.js",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "MachineNet/guide.html": {
+    "resources": [
+      "MachineNet/js/mui.js",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/login.html"
+    ]
+  },
+  "MachineNet/login.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/images/LOGOV.png",
+      "MachineNet/css/style.css",
+      "MachineNet/js/app.js",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css",
+      "MachineNet/images/logo.png"
+    ],
+    "refer": [
+      "MachineNet/MainUI.html"
+    ]
+  },
+  "MachineNet/MainUI.html": {
+    "resources": [
+      "MachineNet/css/app.css",
+      "MachineNet/Pages/MyMachine.html",
+      "MachineNet/css/font-awesome.css",
+      "MachineNet/fonts/fontawesome-webfont.woff2",
+      "MachineNet/css/style.css",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css",
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/app.js"
+    ],
+    "refer": [
+      "MachineNet/setting.html",
+      "MachineNet/Pages/MySetting.html",
+      "MachineNet/Pages/MyMachine.html",
+      "MachineNet/Pages/MyOrder.html",
+      "MachineNet/Pages/MyStock.html"
+    ]
+  },
+  "MachineNet/Pages/OrderDetailByDay.html": {
+    "resources": [
+      "MachineNet/js/mui.picker.min.js",
+      "MachineNet/css/mui.picker.min.css",
+      "MachineNet/images/60x60.gif",
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/MyOrder.html",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyOrder.html"
+    ]
+  },
+  "MachineNet/Pages/MyOrder.html": {
+    "resources": [
+      "MachineNet/Pages/OrderDetailByDay.html",
+      "MachineNet/fonts/fontawesome-webfont.woff2",
+      "MachineNet/css/app.css",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/OrderByMachine.html",
+      "MachineNet/css/font-awesome.css",
+      "MachineNet/css/mui.min.css",
+      "MachineNet/Pages/OrderByProduct.html",
+      "MachineNet/Pages/OrderByPayType.html",
+      "MachineNet/Pages/OrderByMoney.html"
+    ],
+    "refer": [
+      "MachineNet/Pages/OrderDetailByDay.html",
+      "MachineNet/Pages/OrderByMachine.html",
+      "MachineNet/Pages/OrderByProduct.html",
+      "MachineNet/Pages/OrderByPayType.html",
+      "MachineNet/Pages/OrderByMoney.html"
+    ]
+  },
+  "MachineNet/Pages/MyMachine.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/css/app.css",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/font-awesome.css",
+      "MachineNet/css/mui.min.css",
+      "MachineNet/fonts/fontawesome-webfont.woff2",
+      "MachineNet/Pages/MyMachineStatus.html",
+      "MachineNet/Pages/MachineProduct.html",
+      "MachineNet/Pages/MachineLocation.html"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyMachineStatus.html",
+      "MachineNet/Pages/MachineProduct.html",
+      "MachineNet/Pages/MachineLocation.html"
+    ]
+  },
+  "MachineNet/Pages/MyStock.html": {
+    "resources": [
+      "MachineNet/fonts/fontawesome-webfont.woff2",
+      "MachineNet/Pages/StockByProduct.html",
+      "MachineNet/css/app.css",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/font-awesome.css",
+      "MachineNet/css/mui.min.css",
+      "MachineNet/Pages/StockByMachine.html"
+    ],
+    "refer": [
+      "MachineNet/Pages/StockByProduct.html",
+      "MachineNet/Pages/StockByMachine.html"
+    ]
+  },
+  "MachineNet/Pages/MyMachineStatus.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.pullToRefresh.material.js",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/js/mui.pullToRefresh.js",
+      "MachineNet/css/mui.min.css",
+      "MachineNet/Pages/MyMachine.html"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyMachine.html"
+    ]
+  },
+  "MachineNet/Pages/OrderByMachine.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/MyOrder.html",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyOrder.html"
+    ]
+  },
+  "MachineNet/Pages/StockByProduct.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/MyStock.html",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyStock.html"
+    ]
+  },
+  "MachineNet/Pages/MySetting.html": {
+    "resources": [
+      "MachineNet/css/app.css",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/SettingChannel.html",
+      "MachineNet/css/font-awesome.css",
+      "MachineNet/fonts/fontawesome-webfont.woff2",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/SettingChannel.html",
+      "MachineNet/Pages/SettingChannelUpdate.html"
+    ]
+  },
+  "MachineNet/Pages/SettingChannel.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/css/mui.indexedlist.css",
+      "MachineNet/Pages/MySetting.html",
+      "MachineNet/js/mui.indexedlist.js",
+      "MachineNet/js/app.js",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MySetting.html"
+    ]
+  },
+  "MachineNet/Pages/MachineProduct.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/Pages/MyMachine.html",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyMachine.html"
+    ]
+  },
+  "MachineNet/Pages/MachineLocation.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/Pages/MyMachine.html",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyMachine.html"
+    ]
+  },
+  "MachineNet/Pages/OrderByProduct.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/MyOrder.html",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyOrder.html"
+    ]
+  },
+  "MachineNet/Pages/OrderByPayType.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/MyOrder.html",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyOrder.html"
+    ]
+  },
+  "MachineNet/Pages/OrderByMoney.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/Pages/MyOrder.html",
+      "MachineNet/css/mui.min.css"
+    ],
+    "refer": [
+      "MachineNet/Pages/MyOrder.html"
+    ]
+  },
+  "MachineNet/Pages/StockByMachine.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css"
+    ]
+  },
+  "MachineNet/Pages/SettingChannelUpdate.html": {
+    "resources": [
+      "MachineNet/fonts/mui.ttf",
+      "MachineNet/css/mui.indexedlist.css",
+      "MachineNet/js/mui.indexedlist.js",
+      "MachineNet/js/app.js",
+      "MachineNet/js/mui.min.js",
+      "MachineNet/css/mui.min.css"
+    ]
+  }
 }
