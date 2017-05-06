@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>售货机-微信支付二维码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" href="MyOrder.html"></a>
+			<h1 class="mui-title">微信支付二维码</h1>
+		</header>
+
+		<div class="mui-content">
+		   <input class="mui-input" type="text" id="txtOutTradeNo" 
+		   	   value="XM2160031705051521590005" placeholder="订单编号"/>
+		   <input class="btnGetWxQrcode" type="button" value="查询" />
+		   <div>
+		   	 <label >返回结果：</label>
+		   	 <input type="text" id="txtResult" />
+		   </div>
+		  
+		</div>
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript"></script>
+	<script src="../js/app.js"></script>
+
+
+	<script type="text/javascript">
+	
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		
+		mui.ready(function(){
+			
+			mui.plusReady(function(){
+				mui.toast("正在获取数据...");
+				
+				// 初始化外部订单号
+				var outTradeNo = mui("#txtOutTradeNo")[0].value;
+			    console.log(outTradeNo);
+			    
+				mui(".mui-content").on('tap','.btnGetWxQrcode', function(){
+					
+			        var currentTradeNo = mui("#txtOutTradeNo")[0].value;
+			        mui.toast("当前外部订单号为：" + currentTradeNo);
+					GenerateWxQrCode(currentTradeNo);
+				});
+				
+			})
+		})
+		
+		function GenerateWxQrCode(outTradeNo){
+			var url = "http://map.shj8.top/api/AM/WxPay/GetWxPayCodeForMultiToApp";
+			mui.toast("点击事件已执行："+ url);
+			var jsonData = {
+						    "PayType": "2",
+						    "PayNo":  outTradeNo ,
+						    "CreateDate": "2017-05-05 15:22:06.458",
+						    "Creator": "XM216003",
+						    "MPayDetailList": [
+						        {
+						            "ProductName": "四季豆",
+						            "ChannelCode": "2",
+						            "CreateDate": "2017-05-05 15:22:06.462",
+						            "Creator": "XM216003",
+						            "PictureUrl": "doulei_2",
+						            "PayNo": outTradeNo,
+						            "MachineCode": "XM216003",
+						            "PayDetailNo": outTradeNo + "0",
+						            "PayAmount": 0,
+						            "OutNum": 1,
+						            "IsPayComplated": 0,
+						            "IsOutStatus": 0,
+						            "FinishOutNum": 0,
+						            "Amount": 1.2,
+						            "ReturnAmount": 0,
+						            "UnitPrice": 1.2
+						        },
+						        {
+						            "ProductName": "莲藕",
+						            "ChannelCode": "6",
+						            "CreateDate": "2017-05-05 15:22:06.478",
+						            "Creator": "XM216003",
+						            "PictureUrl": "genjin_4",
+						            "PayNo": outTradeNo,
+						            "MachineCode": "XM216003",
+						            "PayDetailNo": outTradeNo + "1",
+						            "PayAmount": 0,
+						            "OutNum": 2,
+						            "IsPayComplated": 0,
+						            "IsOutStatus": 0,
+						            "FinishOutNum": 0,
+						            "Amount": 2.4,
+						            "ReturnAmount": 0,
+						            "UnitPrice": 1.2
+						        }
+						    ],
+						    "MachineCode": "XM216003",
+						    "IsPayComplated": 0,
+						    "OutSaleNum": 3,
+						    "IsFinishSale": 0,
+						    "PayAmount": 3.6000001,
+						    "ChangeAmount": 0,
+						    "CashGenerateStatus": 0,
+						    "CashAmount": 0,
+						    "ReturnAmount": 0,
+						    "ReturnNum": 0
+						};
+			
+			mui.ajax(url, {
+				data: jsonData,
+				dataType: 'json',
+				type: 'POST',
+				timeout: 10000,
+				success: function(data){
+					console.log("获取微信支付二维码" + data);
+					
+				},
+				error: function(xhr, type, errorThrown) {
+						console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
+						plus.nativeUI.toast("网络错误");
+					}
+			})
+					
+		}
+		
+	</script>
+</html>

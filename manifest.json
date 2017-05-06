@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "MachineNet/guide.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "MachineNet/login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -248,7 +248,8 @@
 					"MachineNet/fonts/mui.ttf",
 					"MachineNet/css/style.css",
 					"MachineNet/js/app.js",
-					"MachineNet/css/mui.min.css"
+					"MachineNet/css/mui.min.css",
+					"MachineNet/js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -321,7 +322,8 @@
 					"MachineNet/css/mui.min.css",
 					"MachineNet/Pages/OrderByProduct.html",
 					"MachineNet/Pages/OrderByPayType.html",
-					"MachineNet/Pages/OrderByMoney.html"
+					"MachineNet/Pages/OrderByMoney.html",
+					"MachineNet/Pages/OrderByWxPayQrCode.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -480,6 +482,18 @@
 					"MachineNet/js/app.js",
 					"MachineNet/js/mui.min.js",
 					"MachineNet/css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"MachineNet/Pages/OrderByWxPayQrCode.html": {
+				"resources": [
+					"MachineNet/fonts/mui.ttf",
+					"MachineNet/js/mui.min.js",
+					"MachineNet/css/mui.min.css",
+					"MachineNet/Pages/MyOrder.html",
+					"MachineNet/js/app.js",
+					"MachineNet/js/jquery-1.10.0.min.js"
 				],
 				"refer": [],
 				"priority": 0
