@@ -323,7 +323,8 @@
 					"MachineNet/Pages/OrderByProduct.html",
 					"MachineNet/Pages/OrderByPayType.html",
 					"MachineNet/Pages/OrderByMoney.html",
-					"MachineNet/Pages/OrderByWxPayQrCode.html"
+					"MachineNet/Pages/OrderByWxPayQrCode.html",
+					"MachineNet/fonts/fontawesome-webfont.woff"
 				],
 				"refer": [],
 				"priority": 0

@@ -29,8 +29,7 @@
 		</header>
 
 		<div class="mui-content">
-		   <input class="mui-input" type="text" id="txtOutTradeNo" 
-		   	   value="XM2160031705051521590005" placeholder="订单编号"/>
+		   <input class="mui-input" type="text" id="txtOutTradeNo"  placeholder="订单编号"/>
 		   <input class="btnGetWxQrcode" type="button" value="查询" />
 		   <div>
 		   	 <label >返回结果：</label>
@@ -55,9 +54,9 @@
 				mui.toast("正在获取数据...");
 				
 				// 初始化外部订单号
+			    document.getElementById("txtOutTradeNo").value="XM2160031705051521590005";
 				var outTradeNo = mui("#txtOutTradeNo")[0].value;
 			    console.log(outTradeNo);
-			    
 				mui(".mui-content").on('tap','.btnGetWxQrcode', function(){
 					
 			        var currentTradeNo = mui("#txtOutTradeNo")[0].value;
@@ -72,68 +71,70 @@
 			var url = "http://map.shj8.top/api/AM/WxPay/GetWxPayCodeForMultiToApp";
 			mui.toast("点击事件已执行："+ url);
 			var jsonData = {
-						    "PayType": "2",
-						    "PayNo":  outTradeNo ,
-						    "CreateDate": "2017-05-05 15:22:06.458",
-						    "Creator": "XM216003",
-						    "MPayDetailList": [
-						        {
-						            "ProductName": "四季豆",
-						            "ChannelCode": "2",
-						            "CreateDate": "2017-05-05 15:22:06.462",
-						            "Creator": "XM216003",
-						            "PictureUrl": "doulei_2",
-						            "PayNo": outTradeNo,
-						            "MachineCode": "XM216003",
-						            "PayDetailNo": outTradeNo + "0",
-						            "PayAmount": 0,
-						            "OutNum": 1,
-						            "IsPayComplated": 0,
-						            "IsOutStatus": 0,
-						            "FinishOutNum": 0,
-						            "Amount": 1.2,
-						            "ReturnAmount": 0,
-						            "UnitPrice": 1.2
-						        },
-						        {
-						            "ProductName": "莲藕",
-						            "ChannelCode": "6",
-						            "CreateDate": "2017-05-05 15:22:06.478",
-						            "Creator": "XM216003",
-						            "PictureUrl": "genjin_4",
-						            "PayNo": outTradeNo,
-						            "MachineCode": "XM216003",
-						            "PayDetailNo": outTradeNo + "1",
-						            "PayAmount": 0,
-						            "OutNum": 2,
-						            "IsPayComplated": 0,
-						            "IsOutStatus": 0,
-						            "FinishOutNum": 0,
-						            "Amount": 2.4,
-						            "ReturnAmount": 0,
-						            "UnitPrice": 1.2
-						        }
-						    ],
-						    "MachineCode": "XM216003",
-						    "IsPayComplated": 0,
-						    "OutSaleNum": 3,
-						    "IsFinishSale": 0,
-						    "PayAmount": 3.6000001,
-						    "ChangeAmount": 0,
-						    "CashGenerateStatus": 0,
-						    "CashAmount": 0,
-						    "ReturnAmount": 0,
-						    "ReturnNum": 0
-						};
+    "PayType": "3",
+    "PayNo": "XM2160031705061040550010",
+    "CreateDate": "2017-05-06 10:41:03.256",
+    "Creator": "XM216003",
+    "MPayDetailList": [
+				        {
+				            "ProductName": "玉米",
+				            "ChannelCode": "5",
+				            "CreateDate": "2017-05-06 10:41:03.274",
+				            "Creator": "XM216003",
+				            "PictureUrl": "genjin_3",
+				            "PayNo": "XM2160031705061040550010",
+				            "MachineCode": "XM216003",
+				            "PayDetailNo": "XM21600317050610405500100",
+				            "PayAmount": 0,
+				            "OutNum": 1,
+				            "IsPayComplated": 0,
+				            "IsOutStatus": 0,
+				            "FinishOutNum": 0,
+				            "Amount": 1.2,
+				            "ReturnAmount": 0,
+				            "UnitPrice": 1.2
+				        },
+				        {
+				            "ProductName": "西芹",
+				            "ChannelCode": "3",
+				            "CreateDate": "2017-05-06 10:41:03.280",
+				            "Creator": "XM216003",
+				            "PictureUrl": "genjin_1",
+				            "PayNo": "XM2160031705061040550010",
+				            "MachineCode": "XM216003",
+				            "PayDetailNo": "XM21600317050610405500101",
+				            "PayAmount": 0,
+				            "OutNum": 1,
+				            "IsPayComplated": 0,
+				            "IsOutStatus": 0,
+				            "FinishOutNum": 0,
+				            "Amount": 1.2,
+				            "ReturnAmount": 0,
+				            "UnitPrice": 1.2
+				        }
+				    ],
+				    "MachineCode": "XM216003",
+				    "IsPayComplated": 0,
+				    "OutSaleNum": 2,
+				    "IsFinishSale": 0,
+				    "PayAmount": 2.4,
+				    "ChangeAmount": 0,
+				    "CashGenerateStatus": 0,
+				    "CashAmount": 0,
+				    "ReturnAmount": 0,
+				    "ReturnNum": 0
+			};
 			
+			console.log("json 字符串： "+  eval('('+ jsonData+ ')'));
 			mui.ajax(url, {
-				data: jsonData,
+				data: {"payRecordJson": eval('('+ jsonData+ ')') },
 				dataType: 'json',
 				type: 'POST',
 				timeout: 10000,
 				success: function(data){
 					console.log("获取微信支付二维码" + data);
-					
+					document.getElementById("txtResult").value = data;
+			        
 				},
 				error: function(xhr, type, errorThrown) {
 						console.log("post test button fail [xhr]:" + xhr + " [type]:" + type + " [errorThrown]:" + errorThrown);
